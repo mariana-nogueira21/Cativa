@@ -15,15 +15,15 @@ export class AuthService {
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/users/logar', userLogin)
+    return this.http.post<UserLogin>('https://cativa-back.herokuapp.com/users/logar', userLogin)
   }
 
   cadastrar(user: UsuarioModel): Observable<UsuarioModel>{
-    return this.http.post<UsuarioModel>('http://localhost:8080/users/cadastrar', user)
+    return this.http.post<UsuarioModel>('https://cativa-back.herokuapp.com/users/cadastrar', user)
   }
 
   getByIdUser(id: number): Observable<UsuarioModel>{
-    return this.http.get<UsuarioModel>(`http://localhost:8080/usuario/${id}`)
+    return this.http.get<UsuarioModel>(`https://cativa-back.herokuapp.com/usuario/${id}`)
   }
 
   logado() {
